@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPMD Enterprises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="initializePage()">
+    <header>
+        <h1>CPMD</h1>
+        <p>Enterprises</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('pages')" class="active">Páginas</a></li>
+            <li><a href="#" onclick="showSection('apps')">Aplicaciones</a></li>
+            <li><a href="#" onclick="showSection('info')">Información</a></li>
+        </ul>
+    </nav>
+    <section id="pages" class="content-section">
+        <h2>Páginas</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Páginas Singulares</h3>
+                <p>Description of project 1.</p>
+                <a href="#" onclick="openModal('singular', event)"><img src="info-icon.png" alt="More Info"></a>
+                <div id="modal-singular" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('singular')">&times;</span>
+                        <div class="landing-page">
+                            <section class="section">
+                                <h1>Bienvenido Páginas Singulares</h1>
+                                <p>This is a rief introduction to the project.</p>
+                            </section>
+                            <section class="section">
+                                <h2>Features</h2>
+                                <ul>
+                                    <li>Feature 1</li>
+                                    <li>Feature 2</li>
+                                    <li>Feature 3</li>
+                                </ul>
+                            </section>
+                            <section class="section">
+                                <h2>Benefits</h2>
+                                <ul>
+                                    <li>Benefit 1</li>
+                                    <li>Benefit 2</li>
+                                    <li>Benefit 3</li>
+                                </ul>
+                            </section>
+                            <section class="section">
+                                <h2>Get Started</h2>
+                                <p>Instructions on how to get started with Páginas Singulares.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Páginas Múltiples</h3>
+                <p>Description of project 2.</p>
+                <a href="#" onclick="openModal('multiple', event)"><img src="info-icon.png" alt="More Info"></a>
+                <div id="modal-multiple" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('multiple')">&times;</span>
+                        <div class="tab">
+                            <button class="tablinks active" onclick="openTab(event, 'overview')">Overview</button>
+                            <button class="tablinks" onclick="openTab(event, 'features')">Features</button>
+                            <button class="tablinks" onclick="openTab(event, 'benefits')">Benefits</button>
+                        </div>
+
+                        <div id="overview" class="tabcontent" style="display: block;">
+                            <h3>Overview</h3>
+                            <p>Detailed overview about Páginas Múltiples.</p>
+                        </div>
+
+                        <div id="features" class="tabcontent">
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Feature 1</li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                            </ul>
+                        </div>
+
+                        <div id="benefits" class="tabcontent">
+                            <h3>Benefits</h3>
+                            <ul>
+                                <li>Benefit 1</li>
+                                <li>Benefit 2</li>
+                                <li>Benefit 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Portafolio</h3>
+                <p>Description of custom design.</p>
+                <a href="#" onclick="openModal('portfolio', event)"><img src="info-icon.png" alt="More Info"></a>
+                <div id="modal-portfolio" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('portfolio')">&times;</span>
+                        <h3>Custom Design Portfolio</h3>
+                        <div class="portfolio-gallery">
+                            <div class="portfolio-item">
+                                <img src="project1.jpg" alt="Project 1">
+                                <p>Project 1 Description</p>
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="project2.jpg" alt="Project 2">
+                                <p>Project 2 Description</p>
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="project3.jpg" alt="Project 3">
+                                <p>Project 3 Description</p>
+                            </div>
+                            <!-- Add more portfolio items as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Diseño Personalizado</h3>
+                <p>Description of project 2.</p>
+                <a href="#" onclick="openModal('personal', event)"><img src="info-icon.png" alt="More Info"></a>
+                <div id="modal-personal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('personal')">&times;</span>
+                        <h3>klklklklks</h3>
+                        <p>Detailed information about Páginas Múltiples.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="apps" class="content-section" style="display: none;">
+        <h2>Aplicaciones</h2>
+        <p>Coming Soon...</p>
+    </section>
+    <section id="info" class="content-section" style="display: none;">
+        <h2>Información</h2>
+        <p>I'm a passionate web programmer with experience in HTML, CSS, JavaScript, and more.</p>
+        <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">John Doe</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 CPMD Enterprises. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function initializePage () {
+            showSection('pages');
+        }
+
+        function showSection (sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick').includes(sectionId)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Function to open modal
+        function openModal (modalId, event) {
+            // Close all modals first
+            closeAllModals();
+
+            const modal = document.getElementById(`modal-${modalId}`);
+            const modalContent = modal.querySelector('.modal-content');
+            const rect = event.target.getBoundingClientRect();
+            const buttonCenterX = rect.left + rect.width / 2;
+            const windowWidth = window.innerWidth;
+
+            if (buttonCenterX <= windowWidth / 2) {
+                // Open modal from left side
+                modal.style.right = '0';
+                modal.style.left = 'auto';
+            } else {
+                // Open modal from right side
+                modal.style.left = '0';
+                modal.style.right = 'auto';
+            }
+
+            modal.style.width = '50%'; // Set modal width to 50% of viewport
+            modal.style.transition = 'left 0.3s ease, right 0.3s ease, opacity 0.3s ease'; // Smooth transition
+            modal.style.opacity = '1'; // Fade in modal
+
+            // Ensure "Overview" tab is shown initially
+            document.getElementById('overview').style.display = 'block';
+            document.getElementById('features').style.display = 'none';
+            document.getElementById('benefits').style.display = 'none';
+            const tablinks = modal.querySelectorAll('.tablinks');
+            tablinks.forEach(link => link.classList.remove('active'));
+            tablinks[0].classList.add('active');
+        }
+
+        // Function to close modal
+        function closeModal (modalId) {
+            const modal = document.getElementById(`modal-${modalId}`);
+            modal.style.opacity = '0'; // Fade out modal
+            modal.style.width = '0'; // Set modal width to 0 to hide i
+            modal.style.left = 'auto';
+            modal.style.right = 'auto';
+        }
+
+        // Function to close all modals
+        function closeAllModals () {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.style.opacity = '0'; // Fade out modal
+                modal.style.width = '0'; // Set modal width to 0 to hide it
+                modal.style.left = 'auto';
+                modal.style.right = 'auto';
+            });
+        }
+
+        // Function to open specific tab content
+        function openTab (event, tabName) {
+            const tabcontent = document.getElementsByClassName('tabcontent');
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = 'none';
+            }
+
+            const tablinks = document.getElementsByClassName('tablinks');
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove('active');
+            }
+
+            document.getElementById(tabName).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
