@@ -6,12 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPMD Enterprises</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        header img {
+            max-width: 250px;
+            cursor: pointer;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        .project a.more-info {
+            cursor: pointer;
+            color: goldenrod;
+            text-decoration: underline;
+        }
+
+        .project p {
+            text-align: justify;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* Width of the scrollbar */
+            background-color: transparent;
+            /* Transparent background for the scrollbar */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            /* Transparent background for the scrollbar track */
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            /* Color of the scrollbar handle */
+            border-radius: 5px;
+            /* Roundness of the scrollbar handle */
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            /* Color of the scrollbar handle on hover */
+        }
+    </style>
 </head>
 
 <body onload="initializePage()">
     <header>
-        <h1>CPMD</h1>
-        <p>Enterprises</p>
+        <a href="#">
+            <img src="Logo.png" alt="CPMD Enterprises Logo">
+        </a>
     </header>
     <nav>
         <ul>
@@ -24,74 +80,114 @@
         <h2>Páginas</h2>
         <div class="projects-container">
             <div class="project">
-                <h3>Páginas Singulares</h3>
-                <p>Description of project 1.</p>
-                <a href="#" onclick="openModal('singular', event)"><img src="info-icon.png" alt="More Info"></a>
+                <h3>Singulares</h3>
+                <p>Optimiza tu conversión con nuestra landing page diseñada para captar clientes potenciales de manera
+                    efectiva. Mensaje claro, diseño persuasivo y acciones directas para aumentar tus ventas.</p>
+                <a class="more-info" onclick="openModal('singular', event)">Más Información</a>
                 <div id="modal-singular" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('singular')">&times;</span>
                         <div class="landing-page">
                             <section class="section">
-                                <h1>Bienvenido Páginas Singulares</h1>
-                                <p>This is a rief introduction to the project.</p>
+                                <h1>Bienvenido a las Páginas Singulares</h1>
+                                <p>Te damos la bienvenida a Páginas Singulares, donde convertimos tu visión en una
+                                    realidad digital. Esta sección te
+                                    introduce brevemente a nuestro proyecto y lo que ofrecemos.
+                                </p>
                             </section>
                             <section class="section">
-                                <h2>Features</h2>
+                                <h2>Características</h2>
                                 <ul>
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
+                                    <li>Diseño Responsivo: Adaptado para funcionar perfectamente en dispositivos móviles
+                                        y de escritorio.</li>
+                                    <li>Optimización SEO: Mejora tu visibilidad en los motores de búsqueda para alcanzar
+                                        a más clientes potenciales.
+                                    </li>
+                                    <li>Integración Social: Conecta fácilmente con tus redes sociales para ampliar tu
+                                        alcance y engagement.
+                                    </li>
                                 </ul>
                             </section>
                             <section class="section">
-                                <h2>Benefits</h2>
+                                <h2>Beneficios</h2>
                                 <ul>
-                                    <li>Benefit 1</li>
-                                    <li>Benefit 2</li>
-                                    <li>Benefit 3</li>
+                                    <li>Incrementa la conversión: Diseño optimizado para convertir visitantes en
+                                        clientes.
+                                    </li>
+                                    <li>Personalización completa: Adaptamos cada detalle a las necesidades específicas
+                                        de tu proyecto.
+                                    </li>
+                                    <li>Facilidad de uso: Interfaz intuitiva que garantiza una navegación fluida para
+                                        tus usuarios.
+                                    </li>
                                 </ul>
                             </section>
                             <section class="section">
-                                <h2>Get Started</h2>
-                                <p>Instructions on how to get started with Páginas Singulares.</p>
+                                <h2>Comienza</h2>
+                                <p>¿Listo para empezar? Contactanos para comenzar con Páginas
+                                    Singulares y llevar tu presencia en
+                                    línea al siguiente nivel.
+                                </p>
                             </section>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="project">
-                <h3>Páginas Múltiples</h3>
-                <p>Description of project 2.</p>
-                <a href="#" onclick="openModal('multiple', event)"><img src="info-icon.png" alt="More Info"></a>
+                <h3>Múltiples</h3>
+                <p>Ofrecemos páginas múltiples para tu sitio web, proporcionando una estructura organizada y fácil de
+                    navegar. Ideal para
+                    presentar diversos servicios, productos o información detallada sobre tu negocio.</p>
+                <a class="more-info" onclick="openModal('multiple', event)">Más Información</a>
                 <div id="modal-multiple" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('multiple')">&times;</span>
                         <div class="tab">
-                            <button class="tablinks active" onclick="openTab(event, 'overview')">Overview</button>
-                            <button class="tablinks" onclick="openTab(event, 'features')">Features</button>
-                            <button class="tablinks" onclick="openTab(event, 'benefits')">Benefits</button>
+                            <button class="tablinks active" onclick="openTab(event, 'overview')">General</button>
+                            <button class="tablinks" onclick="openTab(event, 'features')">Características</button>
+                            <button class="tablinks" onclick="openTab(event, 'benefits')">Beneficios</button>
                         </div>
 
                         <div id="overview" class="tabcontent" style="display: block;">
-                            <h3>Overview</h3>
-                            <p>Detailed overview about Páginas Múltiples.</p>
+                            <h3>Visión General</h3>
+                            <p>Obtén una visión detallada de Páginas Múltiples, donde proporcionamos una descripción
+                                completa y detallada de cómo este
+                                servicio puede beneficiar tu negocio. Desde la organización efectiva de contenido hasta
+                                la navegación intuitiva, Páginas
+                                Múltiples están diseñadas para optimizar la experiencia de usuario y mejorar la
+                                accesibilidad de la información clave
+                                sobre tu empresa.
+                            </p>
                         </div>
 
                         <div id="features" class="tabcontent">
-                            <h3>Features</h3>
+                            <h3>Características</h3>
                             <ul>
-                                <li>Feature 1</li>
-                                <li>Feature 2</li>
-                                <li>Feature 3</li>
+                                <li>Diseño Modular: Estructura flexible que permite organizar y presentar diferentes
+                                    secciones de manera cohesiva.
+                                </li>
+                                <li>Navegación Intuitiva: Facilita a tus visitantes encontrar rápidamente la información
+                                    que están buscando.
+                                </li>
+                                <li>Personalización Avanzada: Adaptamos cada página para reflejar la identidad única de
+                                    tu marca y cumplir con tus
+                                    requisitos específicos.
+                                </li>
                             </ul>
                         </div>
 
                         <div id="benefits" class="tabcontent">
-                            <h3>Benefits</h3>
+                            <h3>Beneficios</h3>
                             <ul>
-                                <li>Benefit 1</li>
-                                <li>Benefit 2</li>
-                                <li>Benefit 3</li>
+                                <li>Mejora de la Experiencia del Usuario: Ofrece una navegación más fluida y una
+                                    experiencia de usuario más satisfactoria.
+                                </li>
+                                <li>Mayor Conversión: Diseñadas para aumentar la interacción del usuario y la conversión
+                                    de visitantes en clientes.
+                                </li>
+                                <li>Optimización SEO: Mejora tu visibilidad en los motores de búsqueda para atraer más
+                                    tráfico cualificado a tu sitio web.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -99,53 +195,76 @@
             </div>
             <div class="project">
                 <h3>Portafolio</h3>
-                <p>Description of custom design.</p>
-                <a href="#" onclick="openModal('portfolio', event)"><img src="info-icon.png" alt="More Info"></a>
+                <p>Destaca tus proyectos con nuestro portafolio web personalizado. Muestra tu trabajo de manera
+                    profesional y atractiva,
+                    capturando la atención de potenciales clientes y colaboradores.</p>
+                <a class="more-info" onclick="openModal('portfolio', event)">Más Información</a>
                 <div id="modal-portfolio" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('portfolio')">&times;</span>
-                        <h3>Custom Design Portfolio</h3>
+                        <h3>Diseño de Portafolio Personalizado</h3>
+                        <p>Transforma tu trabajo en una poderosa herramienta de presentación con nuestro servicio de
+                            diseño de portafolio
+                            personalizado. Nosotros creamos portafolios que no solo destacan tu
+                            trabajo, sino que también cautivan
+                            a tu audiencia con un diseño visualmente atractivo y una navegación intuitiva. Desde
+                            artistas y creativos hasta
+                            profesionales independientes y empresas, nuestro enfoque es capturar la esencia única de tu
+                            trabajo y presentarlo de
+                            manera profesional y efectiva.
+                        </p>
                         <div class="portfolio-gallery">
                             <div class="portfolio-item">
-                                <img src="project1.jpg" alt="Project 1">
-                                <p>Project 1 Description</p>
+                                <p>Ejemplo 1:</p>
+                                <img src="Images/6.jpg" alt="Project 1">
                             </div>
                             <div class="portfolio-item">
-                                <img src="project2.jpg" alt="Project 2">
-                                <p>Project 2 Description</p>
+                                <p>Ejemplo 2:</p>
+                                <img src="Images/3.jpg" alt="Project 2">
                             </div>
                             <div class="portfolio-item">
-                                <img src="project3.jpg" alt="Project 3">
-                                <p>Project 3 Description</p>
+                                <p>Ejemplo 3:</p>
+                                <img src="Images/4.jpg" alt="Project 3">
                             </div>
-                            <!-- Add more portfolio items as needed -->
+                            <div class="portfolio-item">
+                                <p>Ejemplo 4:</p>
+                                <img src="Images/2.jpg" alt="Project 3">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="project">
-                <h3>Diseño Personalizado</h3>
-                <p>Description of project 2.</p>
-                <a href="#" onclick="openModal('personal', event)"><img src="info-icon.png" alt="More Info"></a>
+                <h3>Personalizado</h3>
+                <p>Dale vida a tu visión con nuestro diseño web personalizado. Creamos sitios únicos y atractivos que
+                    reflejan la identidad
+                    de tu marca y cautivan a tu audiencia.</p>
+                <a class="more-info" onclick="openModal('personal', event)">Más Información</a>
                 <div id="modal-personal" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('personal')">&times;</span>
-                        <h3>klklklklks</h3>
-                        <p>Detailed information about Páginas Múltiples.</p>
+                        <h2>Contactanos para más información</h2>
+                        <p>Email: <a href="mailto:cpmdcpmdcpmd@gmail.com">cpmdcpmdcpmd@gmail.com</a></p>
+                        <p>Facebook: <a href="https://www.facebook.com/CPMDEnterprises/"
+                                target="_blank">CPMDEnterprises</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="apps" class="content-section" style="display: none;">
-        <h2>Aplicaciones</h2>
-        <p>Coming Soon...</p>
+        <p>Proximamente...</p>
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:cpmdcpmdcpmd@gmail.com">cpmdcpmdcpmd@gmail.com</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/CPMDEnterprises/" target="_blank">CPMD Enterprises</a></p>
     </section>
     <section id="info" class="content-section" style="display: none;">
-        <h2>Información</h2>
-        <p>I'm a passionate web programmer with experience in HTML, CSS, JavaScript, and more.</p>
-        <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">John Doe</a></p>
+        <h2>Contacto</h2>
+        <p>Servicios personalizados de desarrollo web para impulsar tu negocio. Desde diseño hasta implementación, nos
+            encargamos de llevar tu presencia en línea al siguiente nivel. Usamos exclusivamente tecnologías vanilla:
+            HTML, CSS, JavaScript y PHP para garantizar soluciones eficientes y de alta calidad.</p>
+        <p>Email: <a href="mailto:cpmdcpmdcpmd@gmail.com">cpmdcpmdcpmd@gmail.com</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/CPMDEnterprises/" target="_blank">CPMD Enterprises</a></p>
     </section>
     <footer>
         <p>&copy; 2024 CPMD Enterprises. Todos los derechos reservados.</p>

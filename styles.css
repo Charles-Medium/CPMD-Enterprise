@@ -103,6 +103,8 @@ section {
     /* Two columns */
     gap: 1rem;
     /* Gap between projects */
+    margin-bottom: 5rem;
+    /* Adjust as needed */
 }
 
 .project {
